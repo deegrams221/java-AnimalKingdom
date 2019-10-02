@@ -38,11 +38,6 @@ public abstract class Kingdom
         this.yearDiscovered = yearDiscovered;
     }
 
-    public String consume()
-    {
-        return "Consumes";
-    }
-
     public String move() 
     {
         return "Moves";
