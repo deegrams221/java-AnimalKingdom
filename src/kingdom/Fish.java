@@ -5,19 +5,16 @@ package kingdom;
 //                           -> Fish
 //                           -> Mammals
 
-public class Fish implements Animal
+public class Fish extends Animal
 {
+    // fields
     private String name;
     private int yearDiscovered;
-
-    public Fish(String name) 
+    
+    // constructor
+    public Fish(String name, int yearDiscovered) 
     {
-        this.name = name;
-    }
-
-    public Fish(int yearDiscovered) 
-    {
-        this.yearDiscovered = yearDiscovered;
+        super(name, yearDiscovered);
     }
 
     // from Animal

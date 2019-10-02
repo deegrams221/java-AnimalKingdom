@@ -6,65 +6,59 @@ package kingdom;
 
 import java.util.*;
 
-public class Main
+public class Main 
 {
-    public static ArrayList<Kingdom> filteredList = new ArrayList<Kingdom>();
-
-    public static void printKingdom(ArrayList<Kingdom> kingdoms, CheckKingdom tester) 
+    public static void printAnimals(ArrayList<Animal> animals, CheckKingdom tester) 
     {
-        // clear out the filtered list
-        filteredList.clear();
-
-        // loop through the array list
-        for (Kingdom k : kingdoms) 
+        for (Animal animal : animals) 
         {
-            if (tester.test(k)) 
+            if (tester.test(animal)) 
             {
-                System.out.println(k.getName());
+                System.out.println(animal.getName());
             }
         }
     }
 
-    public static void main(String[] args)
+    public static void main(String[] args) 
     {
-    // ArrayList
-        ArrayList<Kingdom> myKingdom = new ArrayList<Kingdom>();
-        // Birds
-        myKingdom.add(new Birds("Pigeon", 1837));
-        myKingdom.add(new Birds("Peacock", 1821));
-        myKingdom.add(new Birds("Toucan", 1758));
-        myKingdom.add(new Birds("Parrot", 1824));
-        myKingdom.add(new Birds("Swan", 1758));
+        ArrayList<Animal> myAnimals = new ArrayList<Animal>();
 
-        // Fish
-        myKingdom.add(new Fish("Salmon", 1758));
-        myKingdom.add(new Fish("Catfish", 1817));
-        myKingdom.add(new Fish("Perch", 1758));
+        // Adding Birds
+        myAnimals.add(new Birds("Pigeon", 1837));
+        myAnimals.add(new Birds("Peacock", 1821));
+        myAnimals.add(new Birds("Toucan", 1758));
+        myAnimals.add(new Birds("Parrot", 1824));
+        myAnimals.add(new Birds("Swan", 1758));
 
-        // Mammals
-        myKingdom.add(new Mammals("Panda", 1869));
-        myKingdom.add(new Mammals("Zebra", 1778));
-        myKingdom.add(new Mammals("Koala", 1816));
-        myKingdom.add(new Mammals("Sloth", 1804));
-        myKingdom.add(new Mammals("Armadillo", 1758));
-        myKingdom.add(new Mammals("Raccoon", 1758));
-        myKingdom.add(new Mammals("Bigfoot", 2021));
+        // Adding Fish
+        myAnimals.add(new Fish("Salmon", 1758));
+        myAnimals.add(new Fish("Catfish", 1817));
+        myAnimals.add(new Fish("Perch", 1758));
+
+        // Adding Mammals
+        myAnimals.add(new Mammals("Panda", 1869));
+        myAnimals.add(new Mammals("Zebra", 1778));
+        myAnimals.add(new Mammals("Koala", 1816));
+        myAnimals.add(new Mammals("Sloth", 1804));
+        myAnimals.add(new Mammals("Armadillo", 1758));
+        myAnimals.add(new Mammals("Raccoon", 1758));
+        myAnimals.add(new Mammals("Bigfoot", 2021));
 
     // Lambda Expressions
 
     // List all the animals in descending order by year named
         System.out.println("\n*** Print in descending order by year named ***");
         // sort
-        myKingdom.sort((k1, k2) -> k1.getYearDiscovered() - k2.getYearDiscovered());
+       // myKingdom.sort((a1, a2) -> a1.getYearDiscovered() - a2.getYearDiscovered());
         // print
-        myKingdom.forEach(k -> System.out.println("Name: " + k.getName() + "Year Named: " + k.getYearDiscovered()));
+      //  myKingdom.forEach(a -> System.out.println("Name: " + a.getName() + "Year Named: " + a.getYearDiscovered()));
 
     // List all the animals alphabetically
         System.out.println("\n*** Print alphabetically ***");
         // sort                                 ignores all case for sorting
-        myKingdom.sort((k1, k2) -> k1.getName().compareToIgnoreCase(k2.getName()));
+     //   myKingdom.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         // print
-        myKingdom.forEach(k -> System.out.println("Name: " + k.getName()));
+      //  myKingdom.forEach(a -> System.out.println("Name: " + a.getName()));
 
     // List all the animals in order by how they move
         System.out.println("\n*** Print in order by how they move ***");

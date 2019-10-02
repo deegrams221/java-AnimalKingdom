@@ -2,5 +2,5 @@ package kingdom;
 
 public interface CheckKingdom 
 {
-    boolean test(Kingdom k);
+    boolean test(Animal a);
 } 
