@@ -5,7 +5,7 @@ package kingdom;
 //                           -> Fish
 //                           -> Mammals
 
-public class Birds implements Kingdom
+public class Birds extends Kingdom
 {
     public Birds(String name, int yearDiscovered) 
     {
