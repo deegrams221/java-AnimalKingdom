@@ -10,11 +10,11 @@ public class Main
 {
     public static void printAnimals(ArrayList<Animal> animals, CheckKingdom tester) 
     {
-        for (Animal animal : animals) 
+        for (Animal a : animals) 
         {
-            if (tester.test(animal)) 
+            if (tester.test(a)) 
             {
-                System.out.println(animal.getName());
+                System.out.println(a.getName());
             }
         }
     }
@@ -49,20 +49,23 @@ public class Main
     // List all the animals in descending order by year named
         System.out.println("\n*** Print in descending order by year named ***");
         // sort
-       // myKingdom.sort((a1, a2) -> a1.getYearDiscovered() - a2.getYearDiscovered());
+        myAnimals.sort((a1, a2) -> a1.getYearDiscovered() - a2.getYearDiscovered());
         // print
-      //  myKingdom.forEach(a -> System.out.println("Name: " + a.getName() + "Year Named: " + a.getYearDiscovered()));
+        myAnimals.forEach(a -> System.out.println("Name: " + a.getName() + "Year Named: " + a.getYearDiscovered()));
 
     // List all the animals alphabetically
         System.out.println("\n*** Print alphabetically ***");
         // sort                                 ignores all case for sorting
-     //   myKingdom.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        myAnimals.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         // print
-      //  myKingdom.forEach(a -> System.out.println("Name: " + a.getName()));
+        myAnimals.forEach(a -> System.out.println("Name: " + a.getName()));
 
     // List all the animals in order by how they move
         System.out.println("\n*** Print in order by how they move ***");
-
+        // sort                             ignores all case for sorting
+        myAnimals.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
+        // print
+        myAnimals.forEach(a -> System.out.println("Name: " + a.getName() + "Year Named: " + a.move()));
 
     // List only those animals the breath with lungs
         System.out.println("\n*** Print only those animals the breath with lungs ***");

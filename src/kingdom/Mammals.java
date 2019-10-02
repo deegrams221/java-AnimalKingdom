@@ -5,7 +5,7 @@ package kingdom;
 //                           -> Fish
 //                           -> Mammals
 
-public class Mammals extends Kingdom
+public class Mammals extends Animal
 {
     // fields
     private String name;
