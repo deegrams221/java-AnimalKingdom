@@ -51,5 +51,34 @@ public class Main
         myKingdom.add(new Mammals("Bigfoot", 2021));
 
         // Lambda Expressions
+
+        // List all the animals in descending order by year named
+        System.out.println("\n*** Print in descending order by year named ***");
+
+
+        // List all the animals alphabetically
+        System.out.println("\n*** Print alphabetically ***");
+
+
+        // List all the animals in order by how they move
+        System.out.println("\n*** Print in order by how they move ***");
+
+
+        // List only those animals the breath with lungs
+        System.out.println("\n*** Print only those animals the breath with lungs ***");
+
+
+        // List only those animals that breath with lungs and were named in 1758
+        System.out.println("\n*** Print only those animals that breath with lungs and were named in 1758 ***");
+
+
+        // List only those animals that lay eggs and breath with lungs
+        System.out.println("\n*** Print only those animals that lay eggs and breath with lungsd ***");
+
+
+        // List alphabetically only those animals that were named in 1758 
+        System.out.println("\n*** Print alphabetically only those animals that were named in 1758 ***");
+
+        
     }
 }
