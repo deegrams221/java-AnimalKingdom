@@ -27,26 +27,29 @@ public class Main
 
     public static void main(String[] args)
     {
+        // ArrayList
+        ArrayList<Kingdom> myKingdom = new ArrayList<Kingdom>();
         // Birds
-        Birds pigeon = new Birds("Pigeon", 1837);
-        Birds peacock = new Birds("Peacock", 1821);
-        Birds toucan = new Birds("Toucan", 1758);
-        Birds parrot = new Birds("Parrot", 1824);
-        Birds swan = new Birds("Swan", 1758);
+        myKingdom.add(new Birds("Pigeon", 1837));
+        myKingdom.add(new Birds("Peacock", 1821));
+        myKingdom.add(new Birds("Toucan", 1758));
+        myKingdom.add(new Birds("Parrot", 1824));
+        myKingdom.add(new Birds("Swan", 1758));
 
         // Fish
-        Fish salmon = new Fish("Salmon", 1758);
-        Fish catfish = new Fish("Catfish", 1817);
-        Fish perch = new Fish("Perch", 1758);
+        myKingdom.add(new Fish("Salmon", 1758));
+        myKingdom.add(new Fish("Catfish", 1817));
+        myKingdom.add(new Fish("Perch", 1758));
 
         // Mammals
-        Mammals panda = new Mammals("Panda", 1869);
-        Mammals zebra = new Mammals("Zebra", 1778);
-        Mammals koala = new Mammals("Koala", 1816);
-        Mammals sloth = new Mammals("Sloth", 1804);
-        Mammals armadillo = new Mammals("Armadillo", 1758);
-        Mammals raccoon = new Mammals("Raccoon", 1758);
-        Mammals bigfoot = new Mammals("Bigfoot", 2021);
+        myKingdom.add(new Mammals("Panda", 1869));
+        myKingdom.add(new Mammals("Zebra", 1778));
+        myKingdom.add(new Mammals("Koala", 1816));
+        myKingdom.add(new Mammals("Sloth", 1804));
+        myKingdom.add(new Mammals("Armadillo", 1758));
+        myKingdom.add(new Mammals("Raccoon", 1758));
+        myKingdom.add(new Mammals("Bigfoot", 2021));
 
+        // Lambda Expressions
     }
 }
