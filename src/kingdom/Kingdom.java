@@ -18,7 +18,7 @@ public abstract class Kingdom
     }
 
     // methods
-    public String getName() 
+    public String getName(String name) 
     {
         return name;
     }
@@ -28,7 +28,7 @@ public abstract class Kingdom
         this.name = name;
     }
 
-    public int getYearDiscovered()
+    public int getYearDiscovered(int yearDiscovered)
     {
         return yearDiscovered;
     }
@@ -56,5 +56,14 @@ public abstract class Kingdom
     public String reproduce() 
     {
         return "Reproduces";
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Kingdom{" +
+                "name='" + name + '\'' +
+                ", yearDiscovered=" + yearDiscovered +
+                '}';
     }
 }
