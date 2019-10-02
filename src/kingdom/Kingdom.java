@@ -18,39 +18,39 @@ public abstract class Kingdom
     }
 
     // methods
-    public String getName(String name) 
+    public String getName() 
     {
         return name;
     }
 
-    public void setName()
+    public void setName(String name)
     {
         this.name = name;
     }
 
-    public int getYearDiscovered(int yearDiscovered)
+    public int getYearDiscovered()
     {
         return yearDiscovered;
     }
 
-    public void setYearDiscovered()
+    public void setYearDiscovered(int yearDiscovered)
     {
         this.yearDiscovered = yearDiscovered;
     }
 
-    public String move() 
+    public String getMove() 
     {
-        return "Moves";
+        return "move";
     }
 
-    public String breathe() 
+    public String getBreath() 
     {
-        return "Breathes";
+        return "breath";
     }
 
-    public String reproduce() 
+    public String getReproduce() 
     {
-        return "Reproduces";
+        return "reproduce";
     }
 
     @Override

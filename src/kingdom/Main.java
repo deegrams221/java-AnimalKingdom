@@ -27,7 +27,7 @@ public class Main
 
     public static void main(String[] args)
     {
-        // ArrayList
+    // ArrayList
         ArrayList<Kingdom> myKingdom = new ArrayList<Kingdom>();
         // Birds
         myKingdom.add(new Birds("Pigeon", 1837));
@@ -50,35 +50,41 @@ public class Main
         myKingdom.add(new Mammals("Raccoon", 1758));
         myKingdom.add(new Mammals("Bigfoot", 2021));
 
-        // Lambda Expressions
+    // Lambda Expressions
 
-        // List all the animals in descending order by year named
+    // List all the animals in descending order by year named
         System.out.println("\n*** Print in descending order by year named ***");
+        // sort
+        myKingdom.sort((k1, k2) -> k1.getYearDiscovered() - k2.getYearDiscovered());
+        // print
+        myKingdom.forEach(k -> System.out.println("Name: " + k.getName() + "Year Named: " + k.getYearDiscovered()));
 
-
-        // List all the animals alphabetically
+    // List all the animals alphabetically
         System.out.println("\n*** Print alphabetically ***");
+        // sort                                 ignores all case for sorting
+        myKingdom.sort((k1, k2) -> k1.getName().compareToIgnoreCase(k2.getName()));
+        // print
+        myKingdom.forEach(k -> System.out.println("Name: " + k.getName()));
 
-
-        // List all the animals in order by how they move
+    // List all the animals in order by how they move
         System.out.println("\n*** Print in order by how they move ***");
 
 
-        // List only those animals the breath with lungs
+    // List only those animals the breath with lungs
         System.out.println("\n*** Print only those animals the breath with lungs ***");
 
 
-        // List only those animals that breath with lungs and were named in 1758
+    // List only those animals that breath with lungs and were named in 1758
         System.out.println("\n*** Print only those animals that breath with lungs and were named in 1758 ***");
 
 
-        // List only those animals that lay eggs and breath with lungs
+    // List only those animals that lay eggs and breath with lungs
         System.out.println("\n*** Print only those animals that lay eggs and breath with lungsd ***");
 
 
-        // List alphabetically only those animals that were named in 1758 
+    // List alphabetically only those animals that were named in 1758 
         System.out.println("\n*** Print alphabetically only those animals that were named in 1758 ***");
 
-        
+
     }
 }

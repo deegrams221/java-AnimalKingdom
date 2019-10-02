@@ -1,20 +1,28 @@
 package kingdom;
 
 // Inheritance path:
-//         Object -> Kingdom -> Birds
+//         Object -> Animal -> Birds
 //                           -> Fish
 //                           -> Mammals
 
-public class Birds extends Kingdom
+public class Birds implements Animal
 {
-    public Birds(String name, int yearDiscovered) 
+    private String name;
+    private int yearDiscovered;
+
+    public Birds(String name) 
     {
-        super(name, yearDiscovered);
+        this.name = name;
     }
 
-    // from Kingdom
+    public Birds(int yearDiscovered) 
+    {
+        this.yearDiscovered = yearDiscovered;
+    }
+
+    // from Animal
     @Override
-    public void move()
+    public String move()
     {
         return "fly";
     }
