@@ -35,4 +35,14 @@ public class Mammals extends Animal
     {
         return "live births";
     }
+
+    
+	@Override
+    public String toString()
+    {
+        return "Mammals{" +
+                "name='" + name + '\'' +
+                ", yearDiscovered=" + yearDiscovered + 
+                '}';
+    }
 }
